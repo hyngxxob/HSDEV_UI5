@@ -1,0 +1,130 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--	<meta charset="utf-8">-->
+<!--	<title>Login</title>-->
+	<!--<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"-->
+ <!--           id="sap-ui-bootstrap"-->
+ <!--           data-sap-ui-theme="sap_belize"-->
+ <!--           data-sap-ui-libs="sap.m"-->
+ <!--           data-sap-ui-async="true"></script>-->
+<!--    <script src="HSDEV\HSDEV\module\"></script>-->
+<!--	<script>-->
+<!--		sap.ui.getCore().attachInit(function () {-->
+<!--			// create a new instance of the App control-->
+<!--			var oApp = new sap.m.App({-->
+<!--				initialPage: "login"-->
+<!--			});-->
+
+<!--			// create a new instance of the Page control-->
+<!--			var oPage = new sap.m.Page("login", {-->
+<!--				title: "Login",-->
+<!--				content: [-->
+<!--					new sap.m.Input("username", {-->
+<!--						placeholder: "Username"-->
+<!--					}),-->
+<!--					new sap.m.Input("password", {-->
+<!--						placeholder: "Password",-->
+<!--						type: "Password"-->
+<!--					}),-->
+<!--					new sap.m.Button({-->
+<!--						text: "Login",-->
+<!--						press: function () {-->
+<!--							var sUsername = sap.ui.getCore().byId("username").getValue();-->
+<!--							var sPassword = sap.ui.getCore().byId("password").getValue();-->
+<!--							// call the backend service to authenticate the user-->
+<!--							// ...-->
+<!--							// if authentication is successful, navigate to the main page-->
+<!--							// oApp.to("main");-->
+<!--							// window.location.href = "./index.html";-->
+							
+<!--							// var oData = oModel.getData();-->
+<!--							// var that = this;-->
+<!--							// var userId = this.getView().byId("id")._lastValue;-->
+<!--							// var userPw = this.getView().byId("pw")._lastValue;-->
+<!--							var userId = sUsername;-->
+<!--							var userPw = sPassword;-->
+<!--							// var userId = "TESTUSER";-->
+<!--							// var userPw = "1qazXSW@";-->
+				
+<!--							f.postMethod("https://0dd2-175-193-135-160.jp.ngrok.io/user/login", {-->
+<!--									// fetch.postMethod("localhost:3100", "user/login", {-->
+<!--									ID: userId,-->
+<!--									PWD: userPw-->
+<!--								})-->
+<!--								.then((data) => {-->
+<!--									console.log(data);-->
+<!--									var storage = jQuery.sap.storage(jQuery.sap.storage.Type.local);-->
+<!--									storage.put("userId", data.data.ID);-->
+<!--									storage.put("userName", data.data.USERNAME);-->
+<!--									storage.put("token", data.token);-->
+<!--									location.reload();-->
+				
+<!--								})-->
+<!--								.catch((err) => console.log(err))-->
+<!--						}-->
+<!--					})-->
+<!--				]-->
+<!--			});-->
+
+<!--			// create a new instance of the Page control for the main page-->
+<!--			var oMainPage = new sap.m.Page("main", {-->
+<!--				title: "Main Page",-->
+<!--				showNavButton: true,-->
+<!--				navButtonPress: function () {-->
+<!--					oApp.back();-->
+<!--				},-->
+<!--				content: [-->
+<!--					new sap.m.Text({-->
+<!--						text: "Welcome to the Main Page"-->
+<!--					})-->
+<!--				]-->
+<!--			});-->
+
+<!--			// add the pages to the app-->
+<!--			oApp.addPage(oPage);-->
+<!--			oApp.addPage(oMainPage);-->
+
+<!--			// place the App control into the HTML document-->
+<!--			oApp.placeAt("content");-->
+<!--		});-->
+<!--	</script>-->
+<!--</head>-->
+<!--<body class="sapUiBody" id="content">-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--확인이 필요한 코드-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>Login</title>
+	<script id="sap-ui-bootstrap"
+            src="resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-resourceroots='{"HSDEV.HSDEV": "./"}'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+			data-sap-ui-async="true"
+			data-sap-ui-frameOptions="trusted">
+            
+    </script>
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.xmlview({
+                viewName: "HSDEV.HSDEV.view.Login",
+                type: sap.ui.core.mvc.ViewType.XML
+            }).placeAt("content");
+        });
+    </script>
+     <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="sapUiBody">
+    <div id="content"></div>
+</body>
+</html>

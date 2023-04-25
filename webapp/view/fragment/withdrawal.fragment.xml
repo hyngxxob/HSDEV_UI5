@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="회원탈퇴">
+		<content>
+			<Label text="비밀번호"></Label>
+			<Input id="fragmentInputUserPw" type="Password" placeholder="비밀번호"/>
+			<Button text="회원탈퇴" press="onWithdrawal"/>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

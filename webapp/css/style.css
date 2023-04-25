@@ -1,0 +1,11 @@
+/* Enter your custom styles here */
+.myCustomLayout {
+    width: 100% !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.myCustomLayout>* {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}

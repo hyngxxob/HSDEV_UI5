@@ -1,0 +1,66 @@
+<!--<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HSDEV.HSDEV.controller.BusinessRoleDetail"-->
+<!--	xmlns:html="http://www.w3.org/1999/xhtml">-->
+<!--	<App>-->
+<!--		<pages>-->
+<!--			<Page title="Title">-->
+<!--				<content></content>-->
+<!--			</Page>-->
+<!--		</pages>-->
+<!--	</App>-->
+<!--</mvc:View>-->
+<mvc:View xmlns="sap.m" xmlns:m="sap.m" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core" controllerName="HSDEV.HSDEV.controller.BusinessRoleDetail">
+	<m:Page id="roleDetailPage" class="sapUiResponsiveContentPadding">
+		<m:content>
+			<!--<f:Form id="FormDisplayColumn_oneGroup" editable="false">-->
+			<!--	<f:title>-->
+			<!--		<core:Title text="Address"/>-->
+			<!--	</f:title>-->
+			<!--	<f:layout>-->
+			<!--		<f:ColumnLayout/>-->
+			<!--	</f:layout>-->
+			<!--	<f:formContainers>-->
+			<!--		<f:FormContainer>-->
+			<!--			<f:formElements>-->
+			<!--				<f:FormElement label="Name">-->
+			<!--					<f:fields>-->
+			<!--						<Text text="{SupplierName}" id="nameText"/>-->
+			<!--					</f:fields>-->
+			<!--				</f:FormElement>-->
+			<!--				<f:FormElement label="Street">-->
+			<!--					<f:fields>-->
+			<!--						<Text text="{Street} {HouseNumber}"/>-->
+			<!--					</f:fields>-->
+			<!--				</f:FormElement>-->
+			<!--				<f:FormElement label="ZIP Code/City">-->
+			<!--					<f:fields>-->
+			<!--						<Text text="{ZIPCode} {City}"/>-->
+			<!--					</f:fields>-->
+			<!--				</f:FormElement>-->
+			<!--				<f:FormElement label="Country">-->
+			<!--					<f:fields>-->
+			<!--						<Text text="{Country}" id="countryText"/>-->
+			<!--					</f:fields>-->
+			<!--				</f:FormElement>-->
+			<!--			</f:formElements>-->
+			<!--		</f:FormContainer>-->
+			<!--	</f:formContainers>-->
+			<!--</f:Form>-->
+			<!--<l:VerticalLayout class="sapUiContentPadding" width="100%">-->
+			<!--	<l:content>-->
+			<!--		<List headerText="Address">-->
+			<!--			<DisplayListItem label="Name" value="test"/>-->
+			<!--			<DisplayListItem label="Street" value="test"/>-->
+			<!--			<DisplayListItem label="City" value="test" type="Navigation"/>-->
+			<!--			<DisplayListItem label="Country" value="test" type="Navigation"/>-->
+			<!--		</List>-->
+			<!--	</l:content>-->
+			<!--</l:VerticalLayout>-->
+			<!--<List headerText="Input">-->
+			<!--<InputListItem label="Flight Mode">-->
+			<!--	<CheckBox selected="true"/>-->
+			<!--</InputListItem>-->
+			<!--</List>-->
+		</m:content>
+	</m:Page>
+</mvc:View>

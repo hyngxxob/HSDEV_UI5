@@ -1,0 +1,214 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "HSDEV.HSDEV",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "HSDEV.HSDEV.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "HSDEV.HSDEV.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "HSDEV.HSDEV.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": true
+			},
+			"routes": [
+				{
+					"name": "RouteApp",
+					"pattern": "RouteApp",
+					"target": [
+						"TargetApp"
+					]
+				},
+				{
+					"name": "Home",
+					"pattern": "Admin/Home",
+					"target": [
+						"AdminHome"
+					]
+				},
+				{
+					"name": "Notice",
+					"pattern": "Notice",
+					"target": [
+						"Notice"
+					]
+				},
+				{
+					"name": "UserList",
+					"pattern": "Admin/UserList",
+					"target": [
+						"UserList"
+					]
+				},
+				{
+					"name": "BusinessRole",
+					"pattern": "Admin/Role",
+					"target": [
+						"BusinessRole"
+					]
+				},
+				{
+					"name": "Settings",
+					"pattern": "Admin/Settings",
+					"target": [
+						"Settings"
+					]
+				},
+				{
+					"name": "UserHome",
+					"pattern": "User/Home",
+					"target": [
+						"UserHome"
+					]
+				},
+				{
+					"name": "UserSettings",
+					"pattern": "User/Settings",
+					"target": [
+						"UserSettings"
+					]
+				},
+				{
+					"name": "Board",
+					"pattern": "Board",
+					"target": [
+						"Board"
+					]
+				}
+			],
+			"targets": {
+				"TargetApp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": true,
+					"viewId": "App",
+					"viewName": "App"
+				},
+				"Login": {
+					"viewType": "XML",
+					"viewName": "Login"
+				},
+				"Notice": {
+					"viewType": "XML",
+					"viewName": "Notice"
+				},
+				"UserList": {
+					"viewType": "XML",
+					"viewName": "UserList"
+				},
+				"Settings": {
+					"viewType": "XML",
+					"viewName": "Settings"
+				},
+				"BusinessRole": {
+					"viewType": "XML",
+					"viewName": "BusinessRole"
+				},
+				"AdminHome": {
+					"viewType": "XML",
+					"viewName": "AdminHome"
+				},
+				"UserHome": {
+					"viewType": "XML",
+					"viewName": "UserHome"
+				},
+				"UserSettings": {
+					"viewType": "XML",
+					"viewName": "UserSettings"
+				},
+				"Board": {
+					"viewType": "XML",
+					"viewName": "UserBoard"
+				},
+				"UserBoardList": {
+					"viewType": "XML",
+					"viewName": "UserBoardList"
+				},
+				"UserBoardDetail": {
+					"viewType": "XML",
+					"viewName": "UserBoardDetail"
+				},
+				"BusinessRoleList": {
+					"viewType": "XML",
+					"viewName": "BusinessRoleList"
+				},
+				"BusinessRoleDetail": {
+					"viewType": "XML",
+					"viewName": "BusinessRoleDetail"
+				},
+				"UserListList": {
+					"viewType": "XML",
+					"viewName": "UserListList"
+				},
+				"UserListDetail": {
+					"viewType": "XML",
+					"viewName": "UserListDetail"
+				}
+			}
+		}
+	}
+}

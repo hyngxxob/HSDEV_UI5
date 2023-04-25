@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HSDEV.HSDEV.controller.Login"
+	xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page id="loginPage" title="Login">
+				<content>
+					<!--<Input id="userId" placeholder="Username"/>-->
+					<!--<Input id="userPw" placeholder="Password" type="Password"/>-->
+					<!--<Button text="Login" press="onLoginPress"/>-->
+					<!--<Image-->
+					<!--	src="https://library.gabia.com/wp-content/uploads/2016/08/%EC%BB%B4%ED%93%A8%ED%84%B0%EC%9D%98-%EC%8B%A4%EC%B2%B4%EC%99%80-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC-%E4%B8%8A.jpeg"-->
+					<!--	width="100%"/>-->
+					<FlexBox height="100%" alignItems="Center" justifyContent="Center">
+						<l:VerticalLayout class="sapUiContentPadding">
+							<Image src="https://sgpgrid.s3-ap-southeast-1.amazonaws.com/200416907R.png" width="300px"/>
+							<Input id="userId" placeholder="User ID" class="sapUiSmallMarginBottom inputBox" submit="onLoginPress"/>
+							<Input id="userPw" placeholder="Password" type="Password" submit="onLoginPress"/>
+							<Button text="로그인" id="loginBtn" press="onLoginPress" type="Transparent" width="100%"/>
+							<Button text="회원가입" press="onOpenDialog" type="Success" ariaDescribedBy="defaultButtonDescription genericButtonDescription" width="100%"></Button>
+						</l:VerticalLayout>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

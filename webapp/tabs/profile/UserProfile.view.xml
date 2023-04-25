@@ -1,0 +1,16 @@
+<mvc:View controllerName="HSDEV.HSDEV.controller.profile.UserProfileController" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" height="100%">
+	<l:VerticalLayout class="sapUiContentPadding" width="100%">
+		<Label text="아이디" labelFor="inputText"/>
+		<Input id="inputUserId" editable="false" placeholder="Enter text" class="sapUiSmallMarginBottom"/>
+		<Label text="닉네임" labelFor="inputText"/>
+		<Input id="inputUserName" editable="false" placeholder="Enter text" class="sapUiSmallMarginBottom"/>
+		<Label text="이메일" labelFor="inputEmail"/>
+		<Input id="inputUserEmail" editable="false" type="Email" placeholder="Enter email" class="sapUiSmallMarginBottom"/>
+		<Label text="핸드폰" labelFor="inputTel"/>
+		<Input id="inputUserPhoneNum" editable="false" type="Tel" placeholder="Enter telephone number" class="sapUiSmallMarginBottom"/>
+		<Label text="URL" labelFor="inputUrl"/>
+		<Input id="inputUrl" editable="false" type="Url" placeholder="Enter URL" class="sapUiSmallMarginBottom"/>
+		<Button text="수정" press="onEdit"></Button>
+	</l:VerticalLayout>
+</mvc:View>

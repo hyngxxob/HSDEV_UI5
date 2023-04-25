@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog title="회원가입" id="joinDialog">
+		<content>
+			<l:VerticalLayout class="myCustomLayout">
+				<Label text="아이디"></Label>
+				<Input id="su_userId" placeholder="아이디"/>
+				<Label text="비밀번호"></Label>
+				<Input id="su_userPw" type="Password" placeholder="비밀번호"/>
+				<Label text="닉네임"></Label>
+				<Input id="su_userName" placeholder="닉네임"/>
+				<Label text="이메일"></Label>
+				<Input id="su_userEmail" placeholder="sample@sample.com"/>
+				<Label text="전화번호"></Label>
+				<Input id="su_userPhoneNum" placeholder="000-0000-000"/>
+				<Button text="Join" press="onJoin" type="Success" width="100%"/>
+				<Button text="Close" press="onClose" type="Transparent" width="100%"/>
+			</l:VerticalLayout>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

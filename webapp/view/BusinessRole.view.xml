@@ -1,0 +1,52 @@
+<!--<mvc:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.f" xmlns:mvc="sap.ui.core.mvc"-->
+<!--	controllerName="HSDEV.HSDEV.controller.BusinessRole" xmlns:html="http://www.w3.org/1999/xhtml">-->
+<!--	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">-->
+<!-- DynamicPage Title -->
+<!--		<f:title>-->
+<!--			<f:DynamicPageTitle>-->
+<!--				<f:heading>-->
+<!--					<Title text="권한"/>-->
+<!--				</f:heading>-->
+<!--			</f:DynamicPageTitle>-->
+<!--		</f:title>-->
+<!-- DynamicPage Content -->
+<!--		<f:content>-->
+<!--			<VBox fitContainer="true">-->
+<!--				<OverflowToolbar class="sapFDynamicPageAlignContent">-->
+<!--					<ToolbarSpacer/>-->
+<!--					<SearchField search=".onSearch" width="17.5rem"/>-->
+<!--					<OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>-->
+<!--					<OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>-->
+<!--				</OverflowToolbar>-->
+<!--				<Table id="RoleListTable" inset="false" class="sapFDynamicPageAlignContent" width="auto">-->
+<!--					<columns>-->
+<!--						<Column width="12em">-->
+<!--							<Text text="Business Role Name"/>-->
+<!--						</Column>-->
+<!--						<Column hAlign="End">-->
+<!--							<Text text="Created By"/>-->
+<!--						</Column>-->
+<!--					</columns>-->
+<!--				</Table>-->
+<!--			</VBox>-->
+<!--		</f:content>-->
+<!-- DynamicPage Footer -->
+<!--		<f:footer>-->
+<!--			<OverflowToolbar>-->
+<!--				<ToolbarSpacer/>-->
+<!--				<Button type="Accept" text="Accept"/>-->
+<!--				<Button type="Reject" text="Reject"/>-->
+<!--			</OverflowToolbar>-->
+<!--		</f:footer>-->
+<!--	</f:DynamicPage>-->
+<!--</mvc:View>-->
+<mvc:View controllerName="HSDEV.HSDEV.controller.BusinessRole" displayBlock="true" height="100%" xmlns="sap.f" xmlns:mvc="sap.ui.core.mvc">
+	<FlexibleColumnLayout id="flexibleColumnLayout" stateChange=".onStateChanged" backgroundDesign="Solid">
+		<beginColumnPages>
+			<mvc:XMLView id="beginView" viewName="HSDEV.HSDEV.view.BusinessRoleList"/>
+		</beginColumnPages>
+		<midColumnPages>
+			<mvc:XMLView id="detailView" viewName="HSDEV.HSDEV.view.BusinessRoleDetail"/>
+		</midColumnPages>
+	</FlexibleColumnLayout>
+</mvc:View>

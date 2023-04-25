@@ -1,0 +1,160 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:grid="sap.ui.layout.cssgrid" xmlns:f="sap.f"
+	xmlns:card="sap.f.cards" xmlns:w="sap.ui.integration.widgets" xmlns:dnd="sap.ui.core.dnd" xmlns:dnd-grid="sap.f.dnd"
+	controllerName="HSDEV.HSDEV.controller.AdminHome" xmlns:html="http://www.w3.org/1999/xhtml">
+	<ScrollContainer height="100%" width="100%" vertical="true">
+		<Panel id="panelForGridList" backgroundDesign="Transparent">
+			<headerToolbar>
+				<Toolbar height="3rem">
+					<Title id="homeHeaderTitle" text="반갑습니다"/>
+				</Toolbar>
+			</headerToolbar>
+			<!--<ToggleButton id="revealGrid" text="Reveal Grids" press=".nRevealGrid" class="sapUiSmallMargin"/>-->
+			<SlideTile id="slideTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">
+				<!--<GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage1.png" frameType="TwoByOne" press="onPress">-->
+				<!--	<TileContent footer="August 21, 2016">-->
+				<!--		<NewsContent contentText="Wind Map: Monitoring Real-Time and Forecasted Wind Conditions across the Globe" subheader="Today, SAP News"/>-->
+				<!--	</TileContent>-->
+				<!--</GenericTile>-->
+				<!--<GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne" state="Failed">-->
+				<!--	<TileContent footer="August 21, 2016">-->
+				<!--		<NewsContent contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" subheader="Today, SAP News"/>-->
+				<!--	</TileContent>-->
+				<!--</GenericTile>-->
+				<!--<GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne" state="Failed">-->
+				<!--	<TileContent footer="August 21, 2016">-->
+				<!--		<NewsContent contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" subheader="Today, SAP News"/>-->
+				<!--	</TileContent>-->
+				<!--</GenericTile>-->
+			</SlideTile>
+			<!--<core:HTML content="&lt;iframe src='https://www.youtube.com/embed/ZZ4tvcDSH7Q' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;"></core:HTML>-->
+			<HBox>
+				<Panel headerText="General" height="100%">
+					<layoutData>
+						<FlexItemData baseSize="50%"/>
+					</layoutData>
+					<f:GridContainer id="grid1" borderReached=".onBorderReached">
+						<!--<GenericTile header="Cumulative Totals" subheader="Expenses">-->
+						<!--	<layoutData>-->
+						<!--		<f:GridContainerItemLayoutData minRows="2" columns="2"/>-->
+						<!--	</layoutData>-->
+						<!--	<TileContent unit="Unit" footer="Footer Text">-->
+						<!--		<NumericContent value="1762" icon="sap-icon://line-charts"/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<!--<w:Card manifest="{manifests>/listContent/orders}">-->
+						<!--	<w:layoutData>-->
+						<!--		<f:GridContainerItemLayoutData columns="3"/>-->
+						<!--	</w:layoutData>-->
+						<!--	<w:customData>-->
+						<!--		<BadgeCustomData value="New"/>-->
+						<!--	</w:customData>-->
+						<!--</w:Card>-->
+						<w:Card id="recentPostCard" manifest="{recentPost>/abcd}">
+							<w:layoutData>
+								<f:GridContainerItemLayoutData columns="3"/>
+							</w:layoutData>
+							<!--<w:customData>-->
+							<!--	<BadgeCustomData value="New"/>-->
+							<!--</w:customData>-->
+						</w:Card>
+						<!--<GenericTile header="Manage Activity Master Data Type" subheader="Subtitle">-->
+						<!--	<layoutData>-->
+						<!--		<f:GridContainerItemLayoutData minRows="2" columns="2"/>-->
+						<!--	</layoutData>-->
+						<!--	<TileContent>-->
+						<!--		<ImageContent src="sap-icon://activities"/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<!--class="sapUiTinyMarginBegin sapUiTinyMarginTop" -->
+						<GenericTile backgroundImage="test-resources/sap/m/images/NewsImage1.png" frameType="OneByOne" press="onPress">
+							<layoutData>
+								<f:GridContainerItemLayoutData minRows="2" columns="2"/>
+							</layoutData>
+							<TileContent footer="Report Available" frameType="OneByOne">
+								<NewsContent contentText="Realtime Business Service Analytics" subheader="SAP Analytics Cloud"/>
+							</TileContent>
+						</GenericTile>
+						<w:Card manifest="{currUserList>/tableContent/employees}">
+							<w:layoutData>
+								<f:GridContainerItemLayoutData minRows="3" columns="4"/>
+							</w:layoutData>
+						</w:Card>
+					</f:GridContainer>
+				</Panel>
+				<Panel headerText="Information" height="100%">
+					<layoutData>
+						<FlexItemData baseSize="50%"/>
+					</layoutData>
+					<f:GridContainer id="grid2" borderReached=".onBorderReached">
+						<!--<w:Card manifest="{manifests>/listContent/tasks}">-->
+						<!--	<w:layoutData>-->
+						<!--		<f:GridContainerItemLayoutData minRows="2" columns="3"/>-->
+						<!--	</w:layoutData>-->
+						<!--</w:Card>-->
+						<GenericTile header="Account" subheader="Your personal information" press="navToSettings">
+							<layoutData>
+								<f:GridContainerItemLayoutData rows="2" columns="2"/>
+							</layoutData>
+							<TileContent>
+								<ImageContent src="sap-icon://account"/>
+							</TileContent>
+						</GenericTile>
+						<!--<GenericTile header="Profit Margin">-->
+						<!--	<layoutData>-->
+						<!--		<f:GridContainerItemLayoutData minRows="2" columns="2"/>-->
+						<!--	</layoutData>-->
+						<!--	<TileContent unit="Unit">-->
+						<!--		<NumericContent scale="%" value="12" valueColor="Critical" indicator="Up"/>-->
+						<!--	</TileContent>-->
+						<!--</GenericTile>-->
+						<w:Card manifest="{manifests>/listContent/contacts}">
+							<w:layoutData>
+								<f:GridContainerItemLayoutData minRows="4" columns="3"/>
+							</w:layoutData>
+						</w:Card>
+						<core:HTML
+							content="&lt;iframe src='https://www.youtube.com/embed/6_CQYtmRJNg' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;&lt;br&gt;&lt;iframe src='https://www.youtube.com/embed/ZZ4tvcDSH7Q' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;"></core:HTML>
+						<!--<core:HTML content="&lt;iframe src='https://www.youtube.com/embed/ZZ4tvcDSH7Q' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;"></core:HTML>-->
+						<!--<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">-->
+						<!--	<GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage1.png" frameType="TwoByOne" press="onPress">-->
+						<!--		<TileContent footer="August 21, 2016">-->
+						<!--			<NewsContent contentText="Wind Map: Monitoring Real-Time and Forecasted Wind Conditions across the Globe" subheader="Today, SAP News"/>-->
+						<!--		</TileContent>-->
+						<!--	</GenericTile>-->
+						<!--	<GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne" state="Failed">-->
+						<!--		<TileContent footer="August 21, 2016">-->
+						<!--			<NewsContent contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" subheader="Today, SAP News"/>-->
+						<!--		</TileContent>-->
+						<!--	</GenericTile>-->
+						<!--	<GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne" state="Failed">-->
+						<!--		<TileContent footer="August 21, 2016">-->
+						<!--			<NewsContent contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" subheader="Today, SAP News"/>-->
+						<!--		</TileContent>-->
+						<!--	</GenericTile>-->
+						<!--</SlideTile>-->
+					</f:GridContainer>
+				</Panel>
+			</HBox>
+			<f:GridList id="gridList" items="{/items}">
+				<f:dragDropConfig>
+					<dnd:DragInfo sourceAggregation="items"/>
+					<dnd-grid:GridDropInfo targetAggregation="items" dropPosition="Between" dropLayout="Horizontal" drop="onDrop"/>
+				</f:dragDropConfig>
+				<f:customLayout>
+					<grid:GridBoxLayout boxMinWidth="17rem"/>
+				</f:customLayout>
+				<f:GridListItem counter="{counter}" highlight="{highlight}" type="{type}" unread="{unread}">
+					<VBox height="100%">
+						<VBox class="sapUiSmallMargin">
+							<layoutData>
+								<FlexItemData growFactor="1" shrinkFactor="0"/>
+							</layoutData>
+							<Title text="{title}" wrapping="true"/>
+							<Label text="{subtitle}" wrapping="true"/>
+						</VBox>
+					</VBox>
+				</f:GridListItem>
+			</f:GridList>
+		</Panel>
+	</ScrollContainer>
+</mvc:View>
